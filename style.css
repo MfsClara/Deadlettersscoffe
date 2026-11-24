@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2c1e14 0%, #3d2817 100%);
+    color: #3b2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #faf7f2;
+    width: 780px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid #e6dcd0;
+}
+
+.topo-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e3d5c6;
+    padding-bottom: 10px;
+}
+
+.icone-cafe {
+    font-size: 22px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #4a321f;
+    letter-spacing: 0.5px;
+}
+
+.form-grid {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.inputs-esq {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputs-dir {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #5c4532;
+}
+
+input[type="text"], textarea {
+    padding: 10px 12px;
+    border: 1px solid #d4c4b4;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: #ffffff;
+    color: #3b2f2f;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #8c6239;
+    box-shadow: 0 0 0 3px rgba(140, 98, 57, 0.15);
+}
+
+textarea {
+    resize: none;
+    height: 75px;
+}
+
+.codigo-estatico {
+    font-size: 14px;
+    color: #5c4532;
+    padding: 8px 0;
+}
+
+.preview-box {
+    width: 140px;
+    height: 140px;
+    border: 2px dashed #d4c4b4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3eee6;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.preview-box span {
+    font-size: 11px;
+    color: #8c7865;
+}
+
+.btn-upload {
+    background-color: #8c6239;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.btn-upload:hover {
+    background-color: #6f4c2b;
+}
+
+.nome-arquivo {
+    font-size: 11px;
+    color: #7a6855;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.preview-box-pequena {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #d4c4b4;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.preview-box-pequena img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-verde {
+    background-color: #5a7d51;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-verde:hover {
+    background-color: #4a6842;
+}
+
+.btn-cinza {
+    background-color: #8c8278;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cinza:hover {
+    background-color: #736a62;
+}
+
+.botoes-topo {
+    margin-bottom: 15px;
+}
+
+.tabela-container {
+    max-height: 280px;
+    overflow-y: auto;
+    border: 1px solid #e3d5c6;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: left;
+}
+
+th {
+    background-color: #6b4e36;
+    color: white;
+    padding: 12px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 12px;
+    font-size: 13px;
+    border-bottom: 1px solid #f0e6dc;
+    color: #4a321f;
+}
+
+.btn-tabela-editar {
+    background-color: #2b4c7e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.btn-tabela-excluir {
+    background-color: #9c3838;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.detalhes-exclusao {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #f3eee6;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e3d5c6;
+    margin-bottom: 20px;
+}
+
+.info-exc p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #4a321f;
+}

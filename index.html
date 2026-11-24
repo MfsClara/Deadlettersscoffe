@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlettersss - Gestão de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <section id="tela-cadastro" class="tela">
+            <div class="topo-logo">
+                <span class="icone-cafe">☕</span>
+                <h2>CADASTRO DE PRODUTOS</h2>
+            </div>
+            <form id="form-cadastro">
+                <div class="form-grid">
+                    <div class="inputs-esq">
+                        <label>Código:</label>
+                        <input type="text" id="cad-codigo" placeholder="Ex: C09">
+
+                        <label>Produto:</label>
+                        <input type="text" id="cad-produto" placeholder="Nome do produto (mín. 5 letras)">
+
+                        <label>Descrição:</label>
+                        <textarea id="cad-descricao" placeholder="Descrição do produto"></textarea>
+
+                        <label>Preço: R$</label>
+                        <input type="text" id="cad-preco" placeholder="0.00">
+                    </div>
+
+                    <div class="inputs-dir">
+                        <div class="preview-box">
+                            <img id="img-preview" src="" alt="Prévia da foto" style="display: none;">
+                            <span id="txt-preview">Imagem do produto</span>
+                        </div>
+                        <label for="cad-foto" class="btn-upload">Escolher Foto</label>
+                        <input type="file" id="cad-foto" accept="image/*" style="display: none;">
+                        <span id="nome-arquivo-cad" class="nome-arquivo">Nenhum arquivo</span>
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit" class="btn-verde">Cadastrar Produto</button>
+                    <button type="button" id="btn-ir-lista" class="btn-cinza">Ver Lista</button>
+                </div>
+            </form>
+        </section>
+        <section id="tela-lista" class="tela" style="display: none;">
+            <div class="topo-logo">
+                <span class="icone-cafe">☕</span>
+                <h2>LISTA DE PRODUTOS</h2>
+            </div>
+            <div class="botoes-topo">
+                <button type="button" id="btn-voltar-cadastro" class="btn-verde">Cadastrar Produto</button>
+            </div>
+            
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Produto</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-produtos">
+                        <!-- Preenchido via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tela-edicao" class="tela" style="display: none;">
+            <div class="topo-logo">
+                <span class="icone-cafe">☕</span>
+                <h2>ALTERAÇÃO DE PRODUTO</h2>
+            </div>
+            <form id="form-edicao">
+                <div class="form-grid">
+                    <div class="inputs-esq">
+                        <p class="codigo-estatico"><strong>Código:</strong> <span id="edit-codigo-lbl"></span></p>
+
+                        <label>Produto:</label>
+                        <input type="text" id="edit-produto">
+
+                        <label>Descrição:</label>
+                        <textarea id="edit-descricao"></textarea>
+
+                        <label>Preço: R$</label>
+                        <input type="text" id="edit-preco">
+                    </div>
+
+                    <div class="inputs-dir">
+                        <div class="preview-box">
+                            <img id="img-preview-edit" src="" alt="Prévia da foto">
+                        </div>
+                        <label for="edit-foto" class="btn-upload">Trocar Foto</label>
+                        <input type="file" id="edit-foto" accept="image/*" style="display: none;">
+                        <span id="nome-arquivo-edit" class="nome-arquivo">Manter foto atual</span>
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit" class="btn-verde">Salvar alterações</button>
+                    <button type="button" id="btn-cancela-edicao" class="btn-cinza">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section id="tela-exclusao" class="tela" style="display: none;">
+            <div class="topo-logo">
+                <span class="icone-cafe">☕</span>
+                <h2>EXCLUSÃO DE PRODUTOS</h2>
+            </div>
+            <div class="detalhes-exclusao">
+                <div class="preview-box-pequena">
+                    <img id="img-preview-exc" src="" alt="Foto">
+                </div>
+                <div class="info-exc">
+                    <p><strong>Código:</strong> <span id="exc-codigo"></span></p>
+                    <p><strong>Produto:</strong> <span id="exc-produto"></span></p>
+                    <p><strong>Descrição:</strong> <span id="exc-descricao"></span></p>
+                    <p><strong>Preço:</strong> R$ <span id="exc-preco"></span></p>
+                </div>
+            </div>
+            <div class="botoes">
+                <button type="button" id="btn-confirma-exclusao" class="btn-verde">OK</button>
+                <button type="button" id="btn-cancela-exclusao" class="btn-cinza">Cancelar</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
